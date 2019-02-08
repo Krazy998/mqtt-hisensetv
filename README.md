@@ -24,6 +24,9 @@ Topic:
 Another example:
 Topic:
 ```
+/remoteapp/tv/remote_service/EFD97888EA564C9AA6174950C3A985B2/actions/sendkey
+KEY_VOLUMEDOWN
+
 /remoteapp/mobile/broadcast/platform_service/actions/volumechange
 
 {
@@ -33,6 +36,9 @@ Topic:
 ```
 Turning TV to standby:
 ```
+/remoteapp/tv/remote_service/EFD97888EA564C9AA6174950C3A985B2/actions/sendkey
+KEY_POWER
+
 /remoteapp/mobile/broadcast/platform_service/actions/tvsleep
 ```
 
