@@ -6,12 +6,12 @@ Hisense Smart TV's (tested on 75P7 model) run a MQTT service on TCP port 36669 w
 To access this service connect via your MQTT client
 
 with the following settings
-
+```
 Host: IP Address of your TV
 Port: 36669
 Username: hisenseservice
 Password: multimqttservice
-
+```
 You can then subscribe to all topics with #.
 
 Here is a sample of the TV state:
