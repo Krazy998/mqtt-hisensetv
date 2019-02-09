@@ -15,31 +15,72 @@ Password: multimqttservice
 You can then subscribe to all topics with #.
 
 Here is a sample of the TV state:
-Topic:
 ```
-/remoteapp/mobile/broadcast/ui_service/state
+Publish:
+/remoteapp/tv/ui_service/EFD97888EA564C9AA6174950C3A985B2/actions/gettvstate
 
+Subscribe:
+/remoteapp/mobile/broadcast/ui_service/state
+JSON output:
 {"statetype":"sourceswitch","sourceid":"4","sourcename":"HDMI 2","is_signal":1,"is_lock":0,"hotel_mode":0,"displayname":"HDMI 2"}
 ```
-Another example:
-Topic:
+How to get TV sources lists:
 ```
-/remoteapp/tv/remote_service/EFD97888EA564C9AA6174950C3A985B2/actions/sendkey
-KEY_VOLUMEDOWN
+Publish:
+/remoteapp/tv/ui_service/EFD97888EA564C9AA6174950C3A985B2/actions/sourcelist
 
-/remoteapp/mobile/broadcast/platform_service/actions/volumechange
-
+Subsribe:
+/remoteapp/mobile/EFD97888EA564C9AA6174950C3A985B2/ui_service/data/sourcelist
+JSON output:
+[{"sourceid":"4","sourcename":"HDMI 2","displayname":"HDMI 2","is_signal":"1","is_lock":"0","hotel_mode":"0"},{"sourceid":"0","sourcename":"TV","displayname":"TV","is_signal":"1","is_lock":"0","hotel_mode":"0"},{"sourceid":"3","sourcename":"HDMI 1","displayname":"HDMI 1","is_signal":"0","is_lock":"0","hotel_mode":"0"},{"sourceid":"5","sourcename":"HDMI 3","displayname":"HDMI 3","is_signal":"0","is_lock":"0","hotel_mode":"0"},{"sourceid":"6","sourcename":"HDMI 4","displayname":"HDMI 4","is_signal":"0","is_lock":"0","hotel_mode":"0"},{"sourceid":"2","sourcename":"COMPONENT","displayname":"COMPONENT","is_signal":"0","is_lock":"0","hotel_mode":"0"},{"sourceid":"1","sourcename":"AV","displayname":"AV","is_signal":"0","is_lock":"0","hotel_mode":"0"}]
+```
+Launch Youtube app:
+```
+Publish:
+/remoteapp/tv/ui_service/EFD97888EA564C9AA6174950C3A985B2/actions/launchapp
 {
-	"volume_type":	1,
-	"volume_value":	41
+  "name" : "YouTube",
+  "urlType" : 37,
+  "storeType" : 0,
+  "url" : "youtube"
 }
 ```
+
+Launch Netflix App:
+```
+/remoteapp/tv/ui_service/EFD97888EA564C9AA6174950C3A985B2/actions/launchapp
+{
+  "name" : "Netflix",
+  "urlType" : 37,
+  "storeType" : 0,
+  "url" : "netflix"
+}
+```
+
 Turning TV to standby:
 ```
+Publish:
 /remoteapp/tv/remote_service/EFD97888EA564C9AA6174950C3A985B2/actions/sendkey
-KEY_POWER
 
-/remoteapp/mobile/broadcast/platform_service/actions/tvsleep
+KEY_POWER
+```
+Change Source:
+```
+/remoteapp/tv/ui_service/EFD97888EA564C9AA6174950C3A985B2/actions/changesource
+
+To TV:
+```
+{
+  "sourceid" : "0",
+  "sourcename" : "TV"
+}
+```
+To HDMI 2:
+```
+{
+  "sourceid" : "4",
+  "sourcename" : "HDMI 2"
+}
 ```
 
 Via the MQTT service you can completely control the tv including:
