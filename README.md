@@ -17,7 +17,7 @@ You can then subscribe to all topics with #.
 Here is a sample of the TV state:
 ```
 Publish:
-/remoteapp/tv/ui_service/EFD97888EA564C9AA6174950C3A985B2/actions/gettvstate
+/remoteapp/tv/ui_service/HomeAssistant/actions/gettvstate
 
 Subscribe:
 /remoteapp/mobile/broadcast/ui_service/state
@@ -27,17 +27,17 @@ JSON output:
 How to get TV sources lists:
 ```
 Publish:
-/remoteapp/tv/ui_service/EFD97888EA564C9AA6174950C3A985B2/actions/sourcelist
+/remoteapp/tv/ui_service/HomeAssistant/actions/sourcelist
 
 Subsribe:
-/remoteapp/mobile/EFD97888EA564C9AA6174950C3A985B2/ui_service/data/sourcelist
+/remoteapp/mobile/HomeAssistant/ui_service/data/sourcelist
 JSON output:
 [{"sourceid":"4","sourcename":"HDMI 2","displayname":"HDMI 2","is_signal":"1","is_lock":"0","hotel_mode":"0"},{"sourceid":"0","sourcename":"TV","displayname":"TV","is_signal":"1","is_lock":"0","hotel_mode":"0"},{"sourceid":"3","sourcename":"HDMI 1","displayname":"HDMI 1","is_signal":"0","is_lock":"0","hotel_mode":"0"},{"sourceid":"5","sourcename":"HDMI 3","displayname":"HDMI 3","is_signal":"0","is_lock":"0","hotel_mode":"0"},{"sourceid":"6","sourcename":"HDMI 4","displayname":"HDMI 4","is_signal":"0","is_lock":"0","hotel_mode":"0"},{"sourceid":"2","sourcename":"COMPONENT","displayname":"COMPONENT","is_signal":"0","is_lock":"0","hotel_mode":"0"},{"sourceid":"1","sourcename":"AV","displayname":"AV","is_signal":"0","is_lock":"0","hotel_mode":"0"}]
 ```
 Launch Youtube app:
 ```
 Publish:
-/remoteapp/tv/ui_service/EFD97888EA564C9AA6174950C3A985B2/actions/launchapp
+/remoteapp/tv/ui_service/HomeAssistant/actions/launchapp
 {
   "name" : "YouTube",
   "urlType" : 37,
@@ -48,7 +48,7 @@ Publish:
 
 Launch Netflix App:
 ```
-/remoteapp/tv/ui_service/EFD97888EA564C9AA6174950C3A985B2/actions/launchapp
+/remoteapp/tv/ui_service/HomeAssistant/actions/launchapp
 {
   "name" : "Netflix",
   "urlType" : 37,
@@ -60,13 +60,13 @@ Launch Netflix App:
 Turning TV to standby:
 ```
 Publish:
-/remoteapp/tv/remote_service/EFD97888EA564C9AA6174950C3A985B2/actions/sendkey
+/remoteapp/tv/remote_service/HomeAssistant/actions/sendkey
 
 KEY_POWER
 ```
 Change Source:
 ```
-/remoteapp/tv/ui_service/EFD97888EA564C9AA6174950C3A985B2/actions/changesource
+/remoteapp/tv/ui_service/homeAssistant/actions/changesource
 ```
 To TV:
 ```
