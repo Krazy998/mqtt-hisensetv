@@ -3,6 +3,8 @@ Details on how to connect to Hisense Smart TV via the built in MQTT broker servi
 
 Hisense Smart TV's (tested on 75P7 model) run a MQTT service on TCP port 36669 which is running mosquitto 1.4.2. This is primarily used to interact with the official hisense remote app.
 
+## NOTE that later versions of Hisense TV's are using a encrpyted MQTT connection on the same port. You need to ensure to set encryption=on and validate=off in your client (as they are using a self signed cert.)
+
 To access this service connect via your MQTT client
 
 with the following settings
@@ -11,6 +13,8 @@ Host: IP Address of your TV
 Port: 36669
 Username: hisenseservice
 Password: multimqttservice
+
+
 ```
 You can then subscribe to all topics with #.
 
@@ -83,14 +87,58 @@ To HDMI 2:
 }
 ```
 
-Via the MQTT service you can completely control the tv including:
+Thank you to @niczoom who provided additional commands using mosquitto_pub/sub executables!
 
-* Power off
-* Change Channel / Channel List
-* Get TV's EPG Data
-* Change Source (HDMI)
-* Launch builtin Youtube / Netflix apps
-* Mimic any button on the remote (up/down/left/right) volume up/down.
+
+Subscribe to all topics
+
+mosquitto_sub -v -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -t #
+
+# Get the tv state (Publish)
+mosquitto_pub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -m 0 -t /remoteapp/tv/ui_service/AutoHTPC/actions/gettvstate.
+
+It needs the -m message paramater filled otherwise you get an error "Error: Both topic and message must be supplied"
+
+Subscribe to topic:
+mosquitto_sub.exe -h <TV_IP> -p 36669 -t /remoteapp/mobile/broadcast/ui_service/state -P multimqttservice -u hisenseservice
+
+# Change/Set the volume
+# Get current volume:
+mosquitto_pub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -t /remoteapp/tv/platform_service/AutoHTPC/actions/getvolume -m ""
+
+# Change/Set Volume (-m = volume level 0-100)
+mosquitto_pub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -t /remoteapp/tv/platform_service/AutoHTPC/actions/changevolume -m 50
+
+# Subscribe to topic:
+mosquitto_sub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -t /remoteapp/mobile/broadcast/ui_service/volume
+
+# Change/View current source
+# Show current state:
+mosquitto_pub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -m 0 -t /remoteapp/tv/ui_service/AutoHTPC/actions/gettvstate
+
+# Show all available sources:
+mosquitto_pub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -m 0 -t /remoteapp/tv/ui_service/AutoHTPC/actions/sourcelist
+
+# Change source. The 'sourceid' is all thats required to change to a new source. For example to change to HDMI1:
+mosquitto_pub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -t /remoteapp/tv/ui_service/AutoHTPC/actions/changesource -m {"sourceid":"3"}
+
+The '' are needed to escape the quotes when run from the command line.
+
+You can use 'sourcename' as well but its not necessary.
+If you are then do not put a space in 'HDMI 1' eg: Use "sourcename":"HDMI1". I found using a space, which is what is shown when using 'sourcelist' above, gives an error.
+
+# TV Power
+mosquitto_pub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -t /remoteapp/tv/remote_service/AutoHTPC/actions/sendkey -m KEY_POWER
+
+# Other
+# Navigation:
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_UP
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RIGHT
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_LEFT
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_DOWN
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_MENU
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RETURNS (Back)
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_EXIT
 
 
 **Please note that:
