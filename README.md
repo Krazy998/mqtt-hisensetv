@@ -61,6 +61,17 @@ Launch Netflix App:
 }
 ```
 
+Launch PrimeVideo app:
+```
+Publish:
+/remoteapp/tv/ui_service/HomeAssistant/actions/launchapp
+{
+  "name" : "Amazon",
+  "urlType" : 37,
+  "storeType" : 0,
+  "url" : "amazon"
+}
+```
 Turning TV to standby:
 ```
 Publish:
