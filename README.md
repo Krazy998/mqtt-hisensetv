@@ -132,13 +132,34 @@ mosquitto_pub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -t /
 
 # Other
 # Navigation:
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_POWER
 /remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_UP
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RIGHT
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_LEFT
 /remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_DOWN
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_MENU
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_LEFT
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RIGHT
 /remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RETURNS (Back)
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_MENU
 /remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_EXIT
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_OK
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_VOLUMEUP
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_VOLUMEDOWN
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_FORWARDS (fastforward)
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_BACK (rewind)
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_STOP
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_PLAY
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_PAUSE
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_MUTE
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_HOME
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_0
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_1
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_2
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_3
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_4
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_5
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_6
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_7
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_8
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_9
 
 
 **Please note that:
