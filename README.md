@@ -171,6 +171,8 @@ mosquitto_pub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -t /
 /remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_7
 /remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_8
 /remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_9
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_SUBTITLE
+
 
 
 **Please note that:
