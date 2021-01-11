@@ -143,35 +143,39 @@ mosquitto_pub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -t /
 
 # Other
 # Navigation:
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_POWER
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_UP
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_DOWN
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_LEFT
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RIGHT
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RETURNS (Back)
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_MENU
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_EXIT
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_OK
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_VOLUMEUP
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_VOLUMEDOWN
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_FORWARDS (fastforward)
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_BACK (rewind)
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_STOP
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_PLAY
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_PAUSE
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_MUTE
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_HOME
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_0
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_1
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_2
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_3
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_4
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_5
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_6
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_7
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_8
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_9
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_SUBTITLE
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_POWER <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_UP <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_DOWN <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_LEFT <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RIGHT <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RETURNS (Back) <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_MENU <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_EXIT <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_OK <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_HOME <br>
+
+# Volume
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_VOLUMEUP <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_VOLUMEDOWN <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_MUTE <br>
+
+# Content interaction
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_FORWARDS (fastforward) <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_BACK (rewind) <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_STOP <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_PLAY <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_PAUSE <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_0 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_1 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_2 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_3 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_4 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_5 <br> 
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_6 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_7 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_8 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_9 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_SUBTITLE <br>
 
 
 
