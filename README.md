@@ -61,6 +61,17 @@ Launch Netflix App:
 }
 ```
 
+Launch PrimeVideo app:
+```
+Publish:
+/remoteapp/tv/ui_service/HomeAssistant/actions/launchapp
+{
+  "name" : "Amazon",
+  "urlType" : 37,
+  "storeType" : 0,
+  "url" : "amazon"
+}
+```
 Turning TV to standby:
 ```
 Publish:
@@ -132,13 +143,40 @@ mosquitto_pub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -t /
 
 # Other
 # Navigation:
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_UP
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RIGHT
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_LEFT
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_DOWN
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_MENU
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RETURNS (Back)
-/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_EXIT
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_POWER <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_UP <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_DOWN <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_LEFT <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RIGHT <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_RETURNS (Back) <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_MENU <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_EXIT <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_OK <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_HOME <br>
+
+# Volume
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_VOLUMEUP <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_VOLUMEDOWN <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_MUTE <br>
+
+# Content interaction
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_FORWARDS (fastforward) <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_BACK (rewind) <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_STOP <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_PLAY <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_PAUSE <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_0 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_1 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_2 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_3 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_4 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_5 <br> 
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_6 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_7 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_8 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_9 <br>
+/remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_SUBTITLE <br>
+
 
 
 **Please note that:
