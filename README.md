@@ -184,7 +184,8 @@ publish:
 subscribe:
 /remoteapp/mobile/HomeAssistant/ui_service/data/applist
 
-**Please note that:
+
+# Please note that:
 
 * Power on  is done via WOL to TV's MAC address (either wired or wireless)
 
