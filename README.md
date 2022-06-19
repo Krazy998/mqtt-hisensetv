@@ -177,9 +177,10 @@ mosquitto_pub.exe -h <TV_IP> -p 36669 -P multimqttservice -u hisenseservice -t /
 /remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_9 <br>
 /remoteapp/tv/remote_service/AutoHTPC/actions/sendkey KEY_SUBTITLE <br>
 
-Enumerate apps:
+# Enumerate apps:
 publish:
 /remoteapp/tv/ui_service/HomeAssistant/actions/applist
+
 subscribe:
 /remoteapp/mobile/HomeAssistant/ui_service/data/applist
 
