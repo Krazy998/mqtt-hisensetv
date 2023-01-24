@@ -5,6 +5,14 @@ Hisense Smart TV's (tested on 75P7 model) run a MQTT service on TCP port 36669 w
 
 ## NOTE that later versions of Hisense TV's are using a encrpyted MQTT connection on the same port. You need to ensure to set encryption=on and validate=off in your client (as they are using a self signed cert.)
 
+##NOTE some newer versions of Hisense TV's have additional checks around authentication codes.
+
+You can send the authentication code by sending the following:
+A user would need to publish
+/remoteapp/tv/ui_service/HomeAssistant/actions/authenticationcode
+{"authNum": XXXX}
+where XXXX is the 4 digit number displayed on the screen. Once this pairing has been completed, the user than then send the other commands to change channel, power off etc.
+
 To access this service connect via your MQTT client
 
 with the following settings
